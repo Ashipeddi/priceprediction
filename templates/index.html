@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>Enter House Details</h1>
+    <form action="/predict" method="POST">
+        <label for="sub_area">Sub-Area:</label>
+        <input type="number" id="sub_area" name="sub_area" required><br><br>
+
+        <label for="property_type">Property Type:</label>
+        <input type="number" id="property_type" name="property_type" required><br><br>
+
+        <label for="property_area">Property Area (in Sq. Ft.):</label>
+        <input type="number" id="property_area" name="property_area" required><br><br>
+
+        <label for="company_name">Company Name:</label>
+        <input type="number" id="company_name" name="company_name" required><br><br>
+
+        <label for="township_name">Township/Society Name:</label>
+        <input type="number" id="township_name" name="township_name" required><br><br>
+
+        <label for="clubhouse">ClubHouse:</label>
+        <input type="number" id="clubhouse" name="clubhouse" min="0" max="1" required><br><br>
+
+        <label for="school">School/University in Township:</label>
+        <input type="number" id="school" name="school" min="0" max="1" required><br><br>
+
+        <label for="hospital">Hospital in Township:</label>
+        <input type="number" id="hospital" name="hospital" min="0" max="1" required><br><br>
+
+        <label for="mall">Mall in Township:</label>
+        <input type="number" id="mall" name="mall" min="0" max="1" required><br><br>
+
+        <label for="park">Park/Jogging Track:</label>
+        <input type="number" id="park" name="park" min="0" max="1" required><br><br>
+
+        <label for="swimming_pool">Swimming Pool:</label>
+        <input type="number" id="swimming_pool" name="swimming_pool" min="0" max="1" required><br><br>
+
+        <label for="gym">Gym:</label>
+        <input type="number" id="gym" name="gym" min="0" max="1" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    <h2>{{ prediction_text }}</h2>
+</body>
+</html>
